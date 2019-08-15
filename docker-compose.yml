@@ -5,9 +5,9 @@ services:
     ports:
       - "6379:6379"
 
-  petrofamily:
+  fam100:
     build: .
-    command: /petrofamily -quorum 3
+    command: /fam100 -quorum 3
     depends_on:
       - redis
     volumes:
