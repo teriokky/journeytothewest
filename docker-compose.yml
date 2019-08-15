@@ -1,0 +1,19 @@
+version: "3.0"
+services:
+  redis:
+    image: redis:5.0.4
+    ports:
+      - "6379:6379"
+
+  fam100:
+    build: .
+    command: /fam100 -quorum 3
+    depends_on:
+      - redis
+    volumes:
+      - "./qna:/qna"
+    environment:
+      TELEGRAM_KEY: "${TELEGRAM_KEY}"
+      QUESTION_DB_PATH: "qna/questions.txt"
+      REDIS_ADDR: "redis:6379"
+

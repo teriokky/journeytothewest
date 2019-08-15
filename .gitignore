@@ -1,0 +1,10 @@
+*.iml
+fam100
+fam100.db
+cmd/telegram/telegram
+telegram/fam100_*
+qna/famili100.txt
+scoreexport/scoreexport
+scoreexport/scores
+./telegram
+qna/famili100.txt
