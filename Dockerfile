@@ -18,5 +18,5 @@ RUN cd cmd/telegram && make linux
 # final stage
 FROM alpine:latest
 RUN apk add --no-cache tzdata ca-certificates
-COPY --from=builder /src/cmd/telegram/petrofamily petrofamily
-CMD ["./petrofamily"]
+COPY --from=builder /src/cmd/telegram/fam100 fam100
+CMD ["./fam100"]
